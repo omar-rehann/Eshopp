@@ -1,0 +1,589 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fafafa;
+}
+
+ :root {
+    --main-color: #fcb700;
+    --dark-color: #000000;
+    --parg-color: #666666;
+    --dark-red: #d01418;
+    --border-color: #6666662a;
+    --name-item: #0066c0;
+}
+
+section.head header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    border-bottom: solid 1px var(--dark-color);
+    z-index: 100;
+}
+
+section.head header h4 {
+    color: #F42C37;
+}
+
+section.head header nav {
+    height: 10px;
+}
+
+section.head header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+section.head header nav ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: bold;
+    margin: 0px 10px;
+}
+
+section.head header .icon {
+    margin: 0px 10px;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+section.head header .icon .toggle {
+    display: none;
+}
+
+section.head header .icon span {
+    position: absolute;
+    background-color: var(--main-color);
+    color: black;
+    right: 20px;
+    padding: 10px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    top: -10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+section.head header .icon i {
+    margin: 0px 12px;
+}
+
+@media (max-width:767px) {
+    section.head header .icon .toggle {
+        display: block;
+        cursor: pointer;
+    }
+    section.head header nav {
+        height: 10px;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 56px;
+        background-color: white;
+        left: -1500px;
+        transition: 2s;
+    }
+    section.head header nav.active {
+        left: 0px;
+        transition: 2s;
+    }
+    section.head header nav ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+    }
+    section.head header nav ul li {
+        text-align: center;
+        line-height: 3;
+    }
+    section.head header nav ul li a {
+        text-decoration: none;
+        color: var(--dark-color);
+        font-weight: bold;
+        margin: 0px 10px;
+        display: block;
+        margin: 10px 10px;
+    }
+    section.head header .icon span {
+        position: absolute;
+        background-color: var(--main-color);
+        color: black;
+        right: 65px;
+        padding: 10px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        top: -10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 20px;
+    }
+    section.head header .icon {
+        margin: 0px 10px;
+        font-size: 20px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+    }
+    section.head header .icon i {
+        margin: 0px 12px;
+    }
+}
+
+
+/* end header */
+
+
+/* start aside */
+
+aside {
+    background-color: #ddd;
+    position: fixed;
+    right: -1600px;
+    top: 0px;
+    height: 100vh;
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
+    z-index: 222;
+}
+
+@media (max-width:767px) {
+    aside {
+        width: 100%;
+    }
+}
+
+aside.active {
+    right: 0px;
+}
+
+aside .frist_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px black;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+aside .frist_item h5 span {
+    color: grey;
+    display: block;
+}
+
+aside .frist_item i {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+aside .item-add {
+    overflow-x: hidden;
+}
+
+aside .item-add .item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px;
+    ;
+}
+
+aside .item-add .item .image img {
+    width: 100px;
+}
+
+aside .item-add .item .name h5 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+aside .item-add .item .delete i {
+    color: black;
+    font-size: 30px;
+    transition: 2s;
+}
+
+aside .item-add .item .delete i:hover {
+    color: red;
+    cursor: pointer;
+}
+
+aside .bottom-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3px;
+}
+
+aside .item-add {
+    border: solid 1px black;
+    height: 100%;
+    margin: 10px 0px;
+}
+
+aside button {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 10px 4px;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 10px 0px;
+}
+
+
+/* end aside */
+
+
+/* start slider */
+
+section.slider {
+    position: relative;
+    top: 70px;
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+section.slider .box-slider {
+    display: flex;
+    transition: 1s;
+}
+
+section.slider .box-slider .box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin: 10px 10px;
+    min-width: 100%;
+}
+
+section.slider .box-slider .box .text h1 {
+    font-size: 60px;
+}
+
+section.slider .box-slider .box .text h2 {
+    font-size: 40px;
+}
+
+section.slider .box-slider .box .text button {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
+section.slider .box-slider .box .text .image {
+    padding: 10px;
+}
+
+section.slider .right {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+section.slider .left {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    right: 50px;
+    cursor: pointer;
+}
+
+
+/* end slider */
+
+
+/* start logo */
+
+section.logo {
+    position: relative;
+    top: 50px;
+    padding: 10px;
+}
+
+section.logo .box.one {
+    background-color: #2B2B2B;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.logo .box.two {
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.logo .box.three {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.logo .box.four {
+    background-color: #C5C9D0;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.logo .box.six {
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.logo .box img {
+    width: 100%;
+}
+
+
+/* end logo */
+
+
+/* start flex */
+
+section.flex {
+    position: relative;
+    top: 90px;
+    padding: 10px;
+}
+
+section.flex .box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+
+section.flex .box .text h6 {
+    color: grey;
+}
+
+section.flex .box .icon i {
+    font-size: 30px;
+}
+
+
+/* end flex */
+
+
+/* start three parts */
+
+section.three_parts {
+    position: relative;
+    top: 100px;
+    padding: 10px;
+}
+
+section.three_parts .box {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    color: white;
+    font-weight: bold;
+    margin: 10px 10px;
+}
+
+section.three_parts .box.two {
+    background-color: green;
+}
+
+section.three_parts .box .info p {
+    max-width: 300px;
+}
+
+
+/* end three parts */
+
+
+/* start new */
+
+section.news {
+    position: relative;
+    top: 100px;
+}
+
+
+/* end new */
+
+
+/* start brand */
+
+section.brand {
+    position: relative;
+    top: 130px;
+}
+
+
+/* end brand */
+
+
+/* start product */
+
+section.product {
+    position: relative;
+    top: 150px;
+}
+
+section.product .continer {
+    text-align: center;
+    margin: 10px 10px;
+}
+
+section.product .continer span {
+    color: grey;
+}
+
+section.product .content_product .box {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ddd;
+    position: relative;
+    margin: 10px 10px;
+}
+
+section.product .content_product .box .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+section.product .content_product .box .icon {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* end  product */
+
+
+/* statt footer */
+
+section.footer {
+    background-color: black;
+    border-radius: 10px;
+    position: relative;
+    top: 140px;
+    padding: 10px;
+    color: white;
+}
+
+.footer .box li a {
+    color: white;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+.footer .box li a:hover {
+    color: #2196f3;
+}
+
+.footer .box i {
+    font-size: 25px;
+    margin-right: 4px;
+    margin-left: 5px;
+}
+
+.footer .box img {
+    max-width: 20%;
+    flex-wrap: wrap;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.footer .box img:hover {
+    transform: scale(1.2);
+}
+
+.footer .box {
+    line-height: 2;
+}
+
+.footer .box li {
+    list-style-type: none;
+    border-bottom: solid 1px #777;
+}
+
+.footer .box li a i {
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+
+/* end footer */

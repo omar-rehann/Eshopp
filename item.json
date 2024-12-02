@@ -1,0 +1,94 @@
+[{
+        "id": 0,
+        "img": "product/p-1.jpg",
+        "name": "Boat HeadPhone",
+        "price": "$120"
+
+    },
+    {
+        "id": 1,
+        "img": "product/p-2.jpg",
+        "name": "Rocky Mountain",
+        "price": "$420"
+
+    },
+    {
+        "id": 2,
+        "img": "product/p-2.jpg",
+        "name": "Rocky Mountain",
+        "price": "$420"
+
+    },
+    {
+        "id": 3,
+        "img": "product/p-3.jpg",
+        "name": "Goggles",
+        "price": "$320"
+
+    },
+    {
+        "id": 4,
+        "img": "product/p-4.jpg",
+        "name": "Printed",
+        "price": "$320"
+
+    },
+    {
+        "id": 5,
+        "img": "img/product-1.jpg",
+        "name": "Camera",
+        "price": "$220"
+
+    },
+    {
+        "id": 6,
+        "img": "img/product-6.jpg",
+        "name": "Smart Watch",
+        "price": "1220"
+
+    },
+    {
+        "id": 7,
+        "img": "img/product-5.jpg",
+        "name": "Gamming",
+        "price": "$60"
+
+    },
+    {
+        "id": 8,
+        "img": "img/product/0.png",
+        "name": "Iphone Pro Max",
+        "price": "$420"
+
+    },
+    {
+        "id": 9,
+        "img": "img/product/1.png",
+        "name": "Iphone Pro Max",
+        "price": "$420"
+
+    },
+    {
+        "id": 10,
+        "img": "img/product/2.png",
+        "name": "Iphone Pro Max",
+        "price": "$420"
+
+    },
+    {
+        "id": 11,
+        "img": "img/product/3.png",
+        "name": "Iphone Pro Max",
+        "price": "$420"
+
+    },
+    {
+        "id": 12,
+        "img": "img/product/4.png",
+        "name": "Iphone Pro Max",
+        "price": "$420"
+
+    }
+
+
+]
